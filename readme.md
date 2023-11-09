@@ -24,7 +24,7 @@ Before running the application, you need to have the following installed:
 1. Clone the repository to your local machine:
 
 ```bash
-git clone url
+https://github.com/vattikutiravi9/sensor-data-api.git
 cd sensor-data-api
 ```
 
