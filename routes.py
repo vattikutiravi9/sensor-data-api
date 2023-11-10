@@ -19,7 +19,7 @@ def get_home():
 
 
 @router.post("/sensor-data", response_model=SensorData)
-async def post_sensor_data(data: SensorData, db: Session = Depends(get_db)):
+def post_sensor_data(data: SensorData, db: Session = Depends(get_db)):
     # Convert reading_type to lowercase
     data.reading_type = data.reading_type.lower()
     # validate the reading type
@@ -38,7 +38,7 @@ async def post_sensor_data(data: SensorData, db: Session = Depends(get_db)):
 
 
 @router.get("/sensor-data/", response_model=List[StatisticResponse])
-async def get_sensor_data(
+def get_sensor_data(
         sensor_ids: List[int] = Query(...),
         metrics: List[str] = Query(None),  # None means optional, can be omitted
         start_date: datetime = Query(None),
