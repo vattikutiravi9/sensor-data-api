@@ -83,3 +83,9 @@ pytest
 ```
 
 For the time being separate test database is not configured. But for production use ensure that you have a test database configured.
+
+### LIVE API
+You can access this API with the instance of this app deployed in GCP cloud run with the below link
+```
+https://sample-oo6b5z3xfq-nn.a.run.app/docs
+```
